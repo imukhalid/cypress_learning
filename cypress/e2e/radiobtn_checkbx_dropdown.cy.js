@@ -29,5 +29,8 @@ describe('Checkboxes', () => {
         // cy.get("input[id='drink1']").should('not.be.checked')
         // cy.get("input[id='drink2']").should('not.be.checked')
         // cy.get("input[id='drink3']").should('be.checked')
+
+        cy.get('select[id="siblings"]').should('be.visible').select(2)
+
     });
 });

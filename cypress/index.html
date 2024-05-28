@@ -6,11 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="https://www.google.com" target="_blank">Google</a>
-    Gender
-    <input type="radio" id="male" name="gender" data-cy="male" value="male">
-    <label for="male">Male</label>
-    <input type="radio" id="female" name="gender" data-cy="female" value="female">
-    <label for="female">Female</label>
+   <button onclick="myFunction()">I am Umair. you can touch Me anytime</button>
+   <button onclick="confirmed()">Confirm Me</button>
+   <button onclick="promptDemo()">Ask Me</button>
+   <script>
+        function myFunction(){
+            alert("Hey! you just touched me.")
+        }
+
+        function confirmed(){
+            confirm("Are you sure you want to touch me?")
+        }
+
+        function promptDemo(){
+            prompt("Why do you want to touch me?")
+        }
+   </script>
 </body>
 </html>
