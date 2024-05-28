@@ -12,23 +12,23 @@ describe('Checkboxes', () => {
         cy.get("input[id='drink2']").should('be.visible').check().should('be.checked')
         cy.get("input[id='drink3']").should('be.visible').check().should('be.checked')
 
-        // // Check
-        // cy.get("input[id='drink1']").check()
-        // cy.get("input[id='drink2']").check()
-        // cy.get("input[id='drink3']").check()
+        // Check
+        cy.get("input[id='drink1']").check()
+        cy.get("input[id='drink2']").check()
+        cy.get("input[id='drink3']").check()
 
-        // // Assert that the field is checked
-        // cy.get("input[id='drink1']").should('be.checked')
-        // cy.get("input[id='drink2']").should('be.checked')
-        // cy.get("input[id='drink3']").should('be.checked')
+        // Assert that the field is checked
+        cy.get("input[id='drink1']").should('be.checked')
+        cy.get("input[id='drink2']").should('be.checked')
+        cy.get("input[id='drink3']").should('be.checked')
 
-        // cy.get("input[id='drink1']").uncheck()
-        // cy.get("input[id='drink2']").uncheck()
+        cy.get("input[id='drink1']").uncheck()
+        cy.get("input[id='drink2']").uncheck()
 
-        // // Assert that the field is checked
-        // cy.get("input[id='drink1']").should('not.be.checked')
-        // cy.get("input[id='drink2']").should('not.be.checked')
-        // cy.get("input[id='drink3']").should('be.checked')
+        // Assert that the field is checked
+        cy.get("input[id='drink1']").should('not.be.checked')
+        cy.get("input[id='drink2']").should('not.be.checked')
+        cy.get("input[id='drink3']").should('be.checked')
 
         cy.get('select[id="siblings"]').should('be.visible').select(2)
 
