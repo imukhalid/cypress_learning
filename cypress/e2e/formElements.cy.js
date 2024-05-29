@@ -39,7 +39,7 @@ describe('Login Test', () => {
 
     ///////////////////////////////////////////////////////////////////
 
-    it('', () => {
+    it('Alert', () => {
       // Visit the login page
       cy.visit('https://practice-automation.com/');
 
@@ -110,11 +110,12 @@ describe('Login Test', () => {
       cy.window().then(function(p){
         //stubbing prompt window
         cy.get('button[id="prompt"]').click();
-        cy.stub(p, "prompt").returns("Welcome");
+        cy.stub(p, "prompt").returns(promptInput);
      });
      
      // verify application message on clicking on OK
-     cy.get('#promptResult').contains('Nice to meet you, Welcome!')
+     cy.get('#promptResult').contains(`Nice to meet you, ${promptInput}!`)
+     cy.get('#promptResult').contains("Nice to meet you, "+promptInput+"")
 
      
 
